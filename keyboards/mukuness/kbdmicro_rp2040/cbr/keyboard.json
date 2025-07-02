@@ -1,6 +1,6 @@
 {
     "manufacturer": "mukuness",
-    "keyboard_name": "mukuness/kbdmicro_rp2040/rcb",
+    "keyboard_name": "mukuness/kbdmicro_rp2040/cbr",
     "maintainer": "kanata",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
