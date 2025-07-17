@@ -30,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [1] = LAYOUT_4x5(
         RGB_TOG, KC_1   , KC_2   , KC_3   ,
-        RGB_MOD, RGB_MOD, KC_ENT , QK_BOOT,
+        _______, RGB_MOD, KC_ENT , QK_BOOT,
         _______, _______, _______,
         _______, _______, _______, _______,
         _______, _______, _______, _______
