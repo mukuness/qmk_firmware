@@ -43,3 +43,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                  _______, _______, _______, _______,          _______,          _______, _______,          KC_HOME, KC_PGDN, KC_END
     )
 };
+
+// 初期化時にLEDを設定する場合はこの関数をコメントアウトする
+// void keyboard_post_init_user(void) {
+//     // 初期接続時に白色を設定
+//     rgblight_sethsv_noeeprom(0, 0, 128);
+// }
+
+// 動的にLEDを変更する場合はこの関数をコメントアウトする
+// layer_state_t layer_state_set_user(layer_state_t state) {
+//     switch (get_highest_layer(state)) {
+//         case 1:
+//             // レイヤー1: 青 (Hue=170)
+//             rgblight_sethsv_noeeprom(170, 255, 128);
+//             break;
+//         default:
+//             // レイヤー0（初期状態）: 白 (Saturation=0で白)
+//             rgblight_sethsv_noeeprom(0, 0, 128);
+//             break;
+//     }
+//     return state;
+// }
