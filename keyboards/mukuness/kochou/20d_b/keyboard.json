@@ -1,11 +1,13 @@
 {
     "manufacturer": "mukuness",
-    "keyboard_name": "mukuness/kochou/20d_b",
+    "keyboard_name": "KOCHOU-20D-B",
     "maintainer": "kanata",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
     "features": {
-        "bootmagic": false,
+        "bootmagic": true,
+        "command": false,
+        "console": false,
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
@@ -16,25 +18,38 @@
         "rows": ["GP1", "GP2", "GP0", "GP3", "GP6", "GP13",  "GP21", "GP20", "GP19", "GP18", "GP17", "GP16"]
     },
     "processor": "RP2040",
-    "url": "https://modpc.mukuness.com",
+    "url": "https://modpc.mukuness.com/hello-kochou-world",
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x0000",
-        "vid": "0xFEED"
+        "pid": "0x2000",
+        "vid": "0x1E24"
+    },
+    "bootmagic": {
+        "matrix": [4, 0]
+    },
+    "rgblight": {
+        "led_count": 3,
+        "hue_steps": 12,
+        "saturation_steps": 12,
+        "brightness_steps": 12,
+        "animations": {
+            "alternating": true,
+            "breathing": true,
+            "rainbow_mood": true
+        }
+    },
+    "ws2812": {
+        "pin": "GP23"
     },
     "layouts": {
         "LAYOUT": {
             "layout": [
-                {"matrix": [4, 3], "x":4.75, "y":2},
-
                 {"matrix": [4, 0], "x":0, "y":0},
                 {"matrix": [0, 1], "x":1, "y":0},
                 {"matrix": [0, 2], "x":2, "y":0},
                 {"matrix": [0, 3], "x":3, "y":0},
                 {"matrix": [0, 4], "x":4, "y":0},
                 {"matrix": [0, 5], "x":5, "y":0},
-
-                {"matrix": [11, 6], "x":5.5, "y":0},
 
                 {"matrix": [6, 11], "x":6, "y":0},
                 {"matrix": [6, 10], "x":7, "y":0},
@@ -51,8 +66,6 @@
                 {"matrix": [1, 4], "x":4, "y":1},
                 {"matrix": [1, 5], "x":5, "y":1},
 
-                {"matrix": [11, 7], "x":5.5, "y":1},
-
                 {"matrix": [7, 11], "x":6, "y":1},
                 {"matrix": [7, 10], "x":7, "y":1},
                 {"matrix": [7, 9], "x":8, "y":1},
@@ -67,8 +80,6 @@
                 {"matrix": [2, 3], "x":3, "y":2},
                 {"matrix": [2, 4], "x":4, "y":2},
                 {"matrix": [2, 5], "x":5, "y":2},
-
-                {"matrix": [11, 8], "x":5.5, "y":2},
 
                 {"matrix": [8, 11], "x":6, "y":2},
                 {"matrix": [8, 10], "x":7, "y":2},
@@ -86,7 +97,14 @@
                 {"matrix": [9, 11], "x":7, "y":3},
                 {"matrix": [9, 10], "x":8, "y":3},
                 {"matrix": [9, 8], "x":9, "y":3},
-                {"matrix": [9, 7], "x":10, "y":3}
+                {"matrix": [9, 7], "x":10, "y":3},
+
+                {"matrix": [4, 3], "x":0, "y":4.25},
+
+
+                {"matrix": [11, 6], "x":5.5, "y":0},
+                {"matrix": [11, 7], "x":5.5, "y":1},
+                {"matrix": [11, 8], "x":5.5, "y":2}
             ]
         }
     }
