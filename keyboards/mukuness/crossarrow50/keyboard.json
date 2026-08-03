@@ -1,11 +1,11 @@
 {
     "manufacturer": "mukuness",
-    "keyboard_name": "mukuness/crossarrow50",
+    "keyboard_name": "CROSSARROW50",
     "maintainer": "kanata",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
     "features": {
-        "bootmagic": false,
+        "bootmagic": true,
         "command": false,
         "console": false,
         "extrakey": true,
@@ -18,17 +18,38 @@
         "rows": ["GP12", "GP5", "GP4", "GP3", "GP2", "GP1", "GP0", "GP14"]
     },
     "processor": "RP2040",
-    "url": "",
+    "url": "https://modpc.mukuness.com/activity/crossarrow",
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x0000",
-        "vid": "0xFEED"
+        "pid": "0x1002",
+        "vid": "0x1E24"
+    },
+    "bootmagic": {
+        "matrix": [0, 1]
+    },
+    "rgblight": {
+        "led_count": 15,
+        "hue_steps": 12,
+        "saturation_steps": 12,
+        "brightness_steps": 12,
+        "animations": {
+            "alternating": true,
+            "breathing": true,
+            "christmas": true,
+            "knight": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "snake": true,
+            "static_gradient": true,
+            "twinkle": true
+        }
+    },
+    "ws2812": {
+        "pin": "GP13"
     },
     "layouts": {
         "LAYOUT_8x8": {
             "layout": [
-                {"matrix": [3, 7], "x":13.5, "y":0.5},
-
                 {"matrix": [0, 1], "x":0, "y":0},
                 {"matrix": [0, 2], "x":1, "y":0},
                 {"matrix": [0, 3], "x":2, "y":0},
@@ -43,6 +64,8 @@
                 {"matrix": [1, 5], "x":11, "y":0},
                 {"matrix": [1, 6], "x":12, "y":0},
                 {"matrix": [1, 7], "x":13, "y":0},
+
+                {"matrix": [3, 7], "x":14.25, "y":0},
                 
                 {"matrix": [2, 0], "x":0, "y":1, "w":1.25},
                 {"matrix": [2, 1], "x":1.25, "y":1},
@@ -56,7 +79,7 @@
                 {"matrix": [3, 2], "x":9.25, "y":1},
                 {"matrix": [3, 4], "x":10.25, "y":1},
                 {"matrix": [3, 5], "x":11.25, "y":1},
-                {"matrix": [3, 6], "x":12.25, "y":1, "w":1.25},
+                {"matrix": [3, 6], "x":12.25, "y":1, "w":1.75},
                 
                 {"matrix": [4, 0], "x":0, "y":2, "w":1.75},
                 {"matrix": [4, 1], "x":1.75, "y":2},
@@ -70,7 +93,7 @@
                 {"matrix": [5, 2], "x":9.75, "y":2},
                 {"matrix": [5, 3], "x":10.75, "y":2},
                 {"matrix": [5, 4], "x":11.75, "y":2},
-                {"matrix": [5, 6], "x":12.75, "y":2},
+                {"matrix": [5, 6], "x":12.75, "y":2, "w":1.25},
 
                 {"matrix": [6, 0], "x":0.25, "y":3, "w":1.25},
                 {"matrix": [6, 1], "x":1.5, "y":3, "w":1.25},
